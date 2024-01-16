@@ -1,3 +1,9 @@
-from django.shortcuts import render
+# Arquivo: weather/views.py
 
-# Create your views here
+from django.shortcuts import render
+from weather.models import City
+
+
+def index(request):
+    cities = {"cities": City.objects.all()}
+    return render(request, "home.html", cities)
