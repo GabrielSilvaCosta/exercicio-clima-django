@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ city }} - Detalhes do Clima
+{% endblock %}
+
+{% block content %}
+  <h2>{{ weather.date|date:"d/m/Y" }} - Detalhes do Clima</h2>
+  <p>Mínima: {{ weather.min_temp }}°C</p>
+  <p>Máxima: {{ weather.max_temp }}°C</p>
+  <p>Descrição: {{ weather.brief_description }}</p>
+{% endblock %}
