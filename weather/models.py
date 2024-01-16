@@ -30,8 +30,13 @@ class DailyWeather(models.Model):
         ("Granizo", "Granizo"),
     ]
 
-    city = models.ForeignKey(City, on_delete=models.CASCADE)
-    date = models.DateField(unique_for_date="city")
+    city = models.ForeignKey(
+        City,
+        on_delete=models.CASCADE,
+        related_name="daily_weather",
+        unique_for_date="date",
+    )
+    date = models.DateField()
     min_temp = models.FloatField()
     max_temp = models.FloatField()
     brief_description = models.CharField(max_length=20, choices=CHOICES)
