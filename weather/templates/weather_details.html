@@ -9,4 +9,5 @@
   <p>Mínima: {{ weather.min_temp }}°C</p>
   <p>Máxima: {{ weather.max_temp }}°C</p>
   <p>Descrição: {{ weather.brief_description }}</p>
+  <p><a href="{% url 'city-page' city.slugify %}">Voltar para a Página da Cidade</a></p>
 {% endblock %}

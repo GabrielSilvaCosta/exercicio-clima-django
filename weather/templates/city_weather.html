@@ -1,16 +1,16 @@
-
-
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block title %}
-{{city}}
+    Clima em {{ city }}
 {% endblock %}
 
 {% block content %}
   {% for weather in weathers %}
-
-  {{ weather }}
-
+    <p>
+      <a href="{% url 'weather-details-page' city.slugify weather.date|date:'Y-m-d' %}">
+        {{ weather }}
+      </a>
+    </p>
   {% endfor %}
-  
+  <p><a href="{% url 'home-page' %}">Início</a></p>
 {% endblock %}
