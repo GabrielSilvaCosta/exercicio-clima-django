@@ -1,4 +1,4 @@
-Exercício Django Clima - Descrição
+Exercício Django Clima
 
 Este exercício envolve a criação de um aplicativo web usando o framework Django para rastrear informações climáticas de cidades. Abaixo está um resumo do que foi realizado:
 
